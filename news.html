@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon X - 新闻要点</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/news.css" />
+  </head>
+  <body class="news-page">
+    <div class="news-layout">
+      <aside class="news-sidebar">
+        <div class="news-logo-wrap">
+          <a href="index.html" class="news-logo-link" aria-label="Carbon X 首页">
+            <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+          </a>
+        </div>
+
+        <div class="news-profile">
+          <img src="assets/images/cart/avatar.png" alt="碳小链" />
+          <h2>碳小链</h2>
+          <p>已认证 <span>✔</span></p>
+        </div>
+
+        <nav class="news-menu">
+          <a href="index.html"><img class="menu-icon-img" src="assets/images/rank/icon-home.png" alt="" />首页</a>
+          <a href="platform.html"><img class="menu-icon-img" src="assets/images/rank/icon-market.png" alt="" />交易市场</a>
+          <a href="cases.html"><img class="menu-icon-img" src="assets/images/rank/icon-rank.png" alt="" />排行榜</a>
+          <a href="dashboard.html"><img class="menu-icon-img" src="assets/images/rank/icon-track.png" alt="" />足迹追踪</a>
+          <a href="contact.html"><img class="menu-icon-img" src="assets/images/rank/icon-setting.png" alt="" />设置</a>
+          <a href="cart.html"><img class="menu-icon-img" src="assets/images/rank/icon-cart.png" alt="" />购物车</a>
+          <a class="active" href="news.html"><img class="menu-icon-img" src="assets/images/rank/icon-news.png" alt="" />新闻要点</a>
+        </nav>
+      </aside>
+
+      <div class="news-main-wrap">
+        <header class="news-topbar">
+          <div class="topbar-left">
+            <a class="square-btn menu-grid-btn" href="index.html" aria-label="返回首页">
+              <span class="dot-grid" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </span>
+            </a>
+
+            <label class="toolbar-search">
+              <span class="search-lens"></span>
+              <input id="topSearchInput" type="search" placeholder="搜索..." />
+            </label>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="square-btn" type="button" data-route="cart.html" aria-label="购物车"><span class="bag-icon"></span></button>
+            <button class="square-btn" type="button" data-route="contact.html" aria-label="设置"><span class="gear-icon"></span></button>
+            <button class="square-btn" type="button" data-route="news.html" aria-label="新闻"><span class="bell-icon"></span></button>
+          </div>
+        </header>
+
+        <main class="news-body">
+          <section class="filter-row">
+            <label class="inline-search">
+              <span class="search-lens"></span>
+              <input id="contentSearchInput" type="search" placeholder="搜索" />
+            </label>
+
+            <div class="sort-row" role="tablist" aria-label="排序方式">
+              <span class="sort-label"><i></i> 排序：</span>
+              <button class="sort-chip active" type="button" data-sort="all">全部</button>
+              <button class="sort-chip" type="button" data-sort="latest">最新</button>
+              <button class="sort-chip" type="button" data-sort="comment">评论</button>
+              <button class="sort-chip" type="button" data-sort="hot">最热</button>
+            </div>
+          </section>
+
+          <section class="news-section">
+            <h2 class="section-title"><span class="section-icon">◉</span> 视频</h2>
+            <div id="videoGrid" class="video-grid"></div>
+          </section>
+
+          <section class="news-section">
+            <h2 class="section-title"><span class="section-icon">▦</span> 资讯</h2>
+            <div id="articleGrid" class="article-grid"></div>
+            <p id="newsEmpty" class="news-empty" hidden>没有匹配的新闻内容，请更换关键词或排序条件。</p>
+          </section>
+
+          <p class="news-footer">-CarbonTradeX.com</p>
+        </main>
+      </div>
+    </div>
+
+    <div id="newsModal" class="news-modal" hidden>
+      <div class="news-modal-backdrop" data-close-modal></div>
+      <section class="news-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+        <button id="closeNewsModalBtn" class="modal-close-btn" type="button" aria-label="关闭">×</button>
+        <img id="newsModalImage" src="" alt="" />
+        <h3 id="newsModalTitle"></h3>
+        <p id="newsModalMeta"></p>
+        <p id="newsModalBody"></p>
+      </section>
+    </div>
+
+    <script src="assets/scripts/news.js"></script>
+  </body>
+</html>

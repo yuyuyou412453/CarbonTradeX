@@ -1,0 +1,335 @@
+:root {
+  --hero-bg-0: #141f31;
+  --hero-bg-1: #192438;
+  --hero-bar: #101927;
+  --hero-text: #eef4fb;
+  --hero-muted: #8fa2bc;
+  --line-soft: rgba(115, 141, 176, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.about-page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans SC", sans-serif;
+  color: var(--hero-text);
+  background: #101a2b;
+}
+
+.about-shell {
+  width: min(1512px, 100%);
+  margin: 0 auto;
+}
+
+.about-hero {
+  min-height: 1020px;
+  background: linear-gradient(90deg, #152136 0%, #19253a 58%, #172237 100%);
+}
+
+.about-toolbar {
+  min-height: 112px;
+  padding: 20px 38px;
+  background: linear-gradient(90deg, #101a2a 0%, #101a28 100%);
+  border-bottom: 1px solid rgba(89, 114, 146, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.toolbar-square {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  border: none;
+  background: #1a2639;
+  position: relative;
+  color: #ecf3fb;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.grid-btn {
+  display: grid;
+  grid-template-columns: repeat(3, 8px);
+  grid-template-rows: repeat(3, 8px);
+  gap: 5px;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-btn span {
+  border-radius: 1px;
+  background: #f0f5fc;
+}
+
+.about-search {
+  width: min(480px, 46vw);
+  height: 68px;
+  border-radius: 20px;
+  border: 1px solid var(--line-soft);
+  background: #172337;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+.search-lens {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #e8f0f9;
+  position: relative;
+  opacity: 0.96;
+}
+
+.search-lens::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #e8f0f9;
+  right: -6px;
+  bottom: 1px;
+  transform: rotate(45deg);
+}
+
+.about-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ecf4fc;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.about-search input::placeholder {
+  color: #899bb3;
+}
+
+.about-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-bag::before,
+.icon-gear::before,
+.icon-bell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 27px;
+  height: 27px;
+  border: 3px solid #edf5fc;
+}
+
+.icon-bag::before {
+  border-radius: 4px;
+}
+
+.icon-gear::before {
+  border-radius: 50%;
+}
+
+.icon-bell::before {
+  border-radius: 12px 12px 8px 8px;
+}
+
+.about-main {
+  padding: 40px 74px 46px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+}
+
+.about-badge {
+  padding-bottom: 90px;
+}
+
+.about-badge img {
+  width: min(532px, 86%);
+  opacity: 0.94;
+}
+
+.about-contact {
+  padding-bottom: 64px;
+}
+
+.about-logos {
+  margin-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 34px;
+}
+
+.about-lzu-logo {
+  width: 273px;
+  height: auto;
+}
+
+.about-cx-logo {
+  width: 255px;
+  height: auto;
+}
+
+.about-contact h2 {
+  margin: 0;
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.about-contact h3 {
+  margin: 46px 0 0;
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.about-contact .follow {
+  margin-top: 30px;
+  letter-spacing: 0.08em;
+}
+
+.about-contact p {
+  margin: 18px 0 0;
+  font-size: 58px;
+  line-height: 1.36;
+  font-weight: 700;
+}
+
+.about-contact .mail-row {
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.about-related {
+  background: #d2d6da;
+}
+
+.about-related img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-footer {
+  min-height: 236px;
+  background: linear-gradient(180deg, #121f31 0%, #101b2a 100%);
+  color: #ecf4fb;
+  display: grid;
+  place-items: center;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-toolbar {
+    padding: 14px 16px;
+    min-height: 84px;
+  }
+
+  .toolbar-square {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+  }
+
+  .grid-btn {
+    grid-template-columns: repeat(3, 6px);
+    grid-template-rows: repeat(3, 6px);
+    gap: 4px;
+  }
+
+  .about-search {
+    width: min(440px, 60vw);
+    height: 50px;
+    border-radius: 12px;
+    padding: 0 14px;
+  }
+
+  .about-search input {
+    font-size: 18px;
+  }
+
+  .icon-bag::before,
+  .icon-gear::before,
+  .icon-bell::before {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+  }
+
+  .about-main {
+    padding: 20px 18px 26px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .about-badge {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-badge img {
+    width: min(360px, 78vw);
+  }
+
+  .about-contact {
+    padding: 0;
+  }
+
+  .about-logos {
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .about-lzu-logo {
+    width: 188px;
+  }
+
+  .about-cx-logo {
+    width: 170px;
+  }
+
+  .about-contact h2,
+  .about-contact h3 {
+    font-size: 34px;
+    margin-top: 18px;
+  }
+
+  .about-contact p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .about-related img {
+    width: 100%;
+  }
+
+  .about-footer {
+    min-height: 120px;
+    font-size: 26px;
+  }
+}

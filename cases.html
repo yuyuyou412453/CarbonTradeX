@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon X - 排行榜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/cases.css" />
+  </head>
+  <body class="rank-page">
+    <div class="rank-layout">
+      <aside class="rank-sidebar">
+        <div class="rank-logo-wrap">
+          <a href="index.html" class="rank-logo-link" aria-label="Carbon X 首页">
+            <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+          </a>
+        </div>
+
+        <div class="rank-profile">
+          <img src="assets/images/cart/avatar.png" alt="碳小链" />
+          <h2>碳小链</h2>
+          <p>已认证 <span>✔</span></p>
+        </div>
+
+        <nav class="rank-menu">
+          <a href="index.html"><img class="menu-icon-img" src="assets/images/rank/icon-home.png" alt="" />首页</a>
+          <a href="platform.html"><img class="menu-icon-img" src="assets/images/rank/icon-market.png" alt="" />交易市场</a>
+          <a class="active" href="cases.html"><img class="menu-icon-img" src="assets/images/rank/icon-rank.png" alt="" />排行榜</a>
+          <a href="dashboard.html"><img class="menu-icon-img" src="assets/images/rank/icon-track.png" alt="" />足迹追踪</a>
+          <a href="contact.html"><img class="menu-icon-img" src="assets/images/rank/icon-setting.png" alt="" />设置</a>
+          <a href="cart.html"><img class="menu-icon-img" src="assets/images/rank/icon-cart.png" alt="" />购物车</a>
+          <a href="news.html"><img class="menu-icon-img" src="assets/images/rank/icon-news.png" alt="" />新闻要点</a>
+        </nav>
+      </aside>
+
+      <div class="rank-main-wrap">
+        <header class="rank-topbar">
+          <div class="topbar-left">
+            <a class="square-btn menu-grid-btn" href="index.html" aria-label="返回首页">
+              <span class="dot-grid" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </span>
+            </a>
+
+            <label class="toolbar-search">
+              <span class="search-lens"></span>
+              <input id="rankSearchInput" type="search" placeholder="搜索" />
+            </label>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="square-btn" type="button" data-route="cart.html" aria-label="购物车"><span class="bag-icon"></span></button>
+            <button class="square-btn" type="button" data-route="contact.html" aria-label="设置"><span class="gear-icon"></span></button>
+            <button class="square-btn" type="button" data-route="news.html" aria-label="通知"><span class="bell-icon"></span></button>
+          </div>
+        </header>
+
+        <main class="rank-body">
+          <section class="rank-card">
+            <div class="rank-card-head">
+              <h1>排行榜</h1>
+              <button class="help-btn" type="button" aria-label="帮助">?</button>
+            </div>
+
+            <p class="rank-item-tag"><span>❖</span> Item</p>
+
+            <div class="rank-table-wrap">
+              <table class="rank-table">
+                <thead>
+                  <tr>
+                    <th data-sort="rank">排名</th>
+                    <th data-sort="user">用户</th>
+                    <th data-sort="asset">碳排放权</th>
+                    <th data-sort="year">年度</th>
+                    <th data-sort="quarter">季度</th>
+                    <th data-sort="month">月度</th>
+                    <th data-sort="market">市场价</th>
+                    <th data-sort="cost">成本</th>
+                    <th data-sort="total">总量</th>
+                  </tr>
+                </thead>
+                <tbody id="rankTableBody"></tbody>
+              </table>
+            </div>
+
+            <div class="rank-foot">
+              <div id="rankPager" class="rank-pager"></div>
+              <p class="online-users"><span class="online-mark"></span>474 用户</p>
+            </div>
+          </section>
+
+          <p id="rankEmpty" class="rank-empty" hidden>没有搜索到匹配用户，请更换关键词。</p>
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/scripts/cases.js"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon X - 足迹追踪</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/dashboard.css" />
+  </head>
+  <body class="track-page">
+    <div class="track-layout">
+      <aside class="track-sidebar">
+        <div class="sidebar-logo-wrap">
+          <a class="sidebar-logo-link" href="index.html" aria-label="Carbon X 首页">
+            <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+          </a>
+        </div>
+
+        <div class="sidebar-profile">
+          <img src="assets/images/cart/avatar.png" alt="碳小链" />
+          <h2>碳小链</h2>
+          <p>verified <span>✔</span></p>
+        </div>
+
+                <nav class="sidebar-nav">
+          <a href="index.html"><img class="menu-icon-img" src="assets/images/rank/icon-home.png" alt="" />首页</a>
+          <a href="platform.html"><img class="menu-icon-img" src="assets/images/rank/icon-market.png" alt="" />交易市场</a>
+          <a href="cases.html"><img class="menu-icon-img" src="assets/images/rank/icon-rank.png" alt="" />排行榜</a>
+          <a class="active" href="dashboard.html"><img class="menu-icon-img" src="assets/images/rank/icon-track.png" alt="" />足迹追踪</a>
+          <a href="contact.html"><img class="menu-icon-img" src="assets/images/rank/icon-setting.png" alt="" />设置</a>
+          <a href="cart.html"><img class="menu-icon-img" src="assets/images/rank/icon-cart.png" alt="" />购物车</a>
+          <a href="news.html"><img class="menu-icon-img" src="assets/images/rank/icon-news.png" alt="" />新闻要点</a>
+        </nav>
+      </aside>
+
+      <div class="track-main-wrap">
+        <header class="track-topbar">
+          <div class="topbar-left">
+            <a class="toolbar-square grid-btn" href="index.html" aria-label="返回首页">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </a>
+
+            <label class="top-search">
+              <span class="search-lens"></span>
+              <input id="trackSearchInput" type="search" placeholder="搜索" />
+            </label>
+          </div>
+
+          <div class="topbar-right">
+            <button class="toolbar-square icon-bag" type="button" data-route="cart.html" aria-label="购物车"></button>
+            <button class="toolbar-square icon-gear" type="button" data-route="contact.html" aria-label="设置"></button>
+            <button class="toolbar-square icon-bell" type="button" data-route="news.html" aria-label="新闻"></button>
+          </div>
+        </header>
+
+        <main class="track-body">
+          <section class="overview-grid">
+            <article class="panel coin-overview">
+              <div class="coin-header">
+                <img src="assets/images/cart/avatar.png" alt="Citcoin" />
+                <div>
+                  <h1>Citcoin 价格· (CTC)</h1>
+                  <p>Rank <span>#2</span></p>
+                </div>
+              </div>
+
+              <div class="coin-meta-list" id="trackTabContent">
+                <div class="coin-meta-item">
+                  <span class="meta-key">Website</span>
+                  <a class="meta-value" href="index.html">CarbonTradeX.com</a>
+                </div>
+                <div class="coin-meta-item">
+                  <span class="meta-key">Community</span>
+                  <span class="meta-value">邮箱：1720249798@qq.com</span>
+                </div>
+                <div class="coin-meta-item">
+                  <span class="meta-key">Contract</span>
+                  <span class="meta-value">0x2170d088...bd959933f8</span>
+                </div>
+              </div>
+
+              <div class="coin-tabs" role="tablist" aria-label="内容切换">
+                <button class="coin-tab active" type="button" data-tab="overview">概述</button>
+                <button class="coin-tab" type="button" data-tab="history">历史数据</button>
+                <button class="coin-tab" type="button" data-tab="project">项目信息</button>
+                <button class="coin-tab" type="button" data-tab="news">新闻要点</button>
+                <button class="coin-tab" type="button" data-tab="forum">论坛</button>
+                <button class="coin-tab" type="button" data-tab="analysis">数据分析</button>
+              </div>
+
+              <div class="trend-title">
+                <img src="assets/images/cart/avatar.png" alt="" />
+                <img class="trend-rnb" src="assets/images/dashboard/currency-rnb.png" alt="" />
+                <strong>价格走势图</strong>
+              </div>
+
+              <div class="trend-chart-wrap">
+                <img src="assets/images/dashboard/chart-trend.png" alt="价格走势图" />
+              </div>
+            </article>
+
+            <aside class="side-column">
+              <article class="panel price-panel">
+                <div class="price-top">
+                  <p>Citcoin Price (ETH)</p>
+                  <span>▲ 3.36%</span>
+                </div>
+                <div class="price-main">
+                  <strong id="priceValue">¥1,134.86</strong>
+                  <em id="priceSub">0.05637 CTC</em>
+                </div>
+
+                <div class="stats-grid">
+                  <div>
+                    <p>市值</p>
+                    <strong id="marketValue">¥3500.0</strong>
+                  </div>
+                  <div>
+                    <p>流通供应量</p>
+                    <strong id="circulatingSupply">119,572,047</strong>
+                  </div>
+                  <div>
+                    <p>交易量 24h</p>
+                    <strong id="volume24h">¥2502.3T</strong>
+                  </div>
+                  <div>
+                    <p>总供应量</p>
+                    <strong id="totalSupply">119,572,047</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="panel trade-panel">
+                <h3>加密计算器</h3>
+                <p>设置账户只需不到1分钟。</p>
+
+                <div class="token-mini-list">
+                  <div class="token-mini-item">
+                    <img src="assets/images/cart/avatar.png" alt="CER" />
+                    <div>
+                      <small>CER</small>
+                      <strong>碳排放权</strong>
+                    </div>
+                    <span>0.01</span>
+                  </div>
+                  <div class="token-mini-item">
+                    <img src="assets/images/dashboard/currency-rnb.png" alt="RNB" />
+                    <div>
+                      <small>RNB</small>
+                      <strong>人民币</strong>
+                    </div>
+                    <span>¥160</span>
+                  </div>
+                </div>
+
+                <button id="buyCitcoinBtn" class="buy-btn" type="button">
+                  购买Citcoin
+                  <span>→</span>
+                </button>
+              </article>
+
+              <article class="panel exchange-panel">
+                <div class="exchange-head">
+                  <button id="shareBtn" type="button" class="share-btn">分享</button>
+                  <h3>以太坊市场</h3>
+                </div>
+
+                <div class="range-row" role="tablist" aria-label="周期">
+                  <button class="range-btn" type="button" data-range="1D">1D</button>
+                  <button class="range-btn" type="button" data-range="1M">1M</button>
+                  <button class="range-btn" type="button" data-range="6M">6M</button>
+                  <button class="range-btn" type="button" data-range="1Y">1Y</button>
+                  <button class="range-btn" type="button" data-range="YTD">YTD</button>
+                  <button class="range-btn active" type="button" data-range="All">All</button>
+                </div>
+
+                <div class="exchange-table-wrap">
+                  <table class="exchange-table">
+                    <thead>
+                      <tr>
+                        <th>Icon</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>Volume</th>
+                      </tr>
+                    </thead>
+                    <tbody id="exchangeBody"></tbody>
+                  </table>
+                </div>
+
+                <a class="view-link" href="platform.html">查看 <span>→</span></a>
+              </article>
+            </aside>
+          </section>
+
+          <section class="news-grid" id="trackNewsGrid">
+            <article class="news-card" data-search="减碳为企业增收7900万元 青岛 25家企业">
+              <img src="assets/images/dashboard/news-1.png" alt="新闻1" />
+              <h4>减碳为企业增收7900万元！青岛已有25家企业进入全国碳市场</h4>
+              <div class="news-actions">
+                <button class="fav-btn" type="button" aria-label="收藏">♡</button>
+                <a class="read-btn" href="news.html">阅读 <span>→</span></a>
+              </div>
+            </article>
+
+            <article class="news-card" data-search="聚焦碳交易 2025年政府工作报告 双碳部署">
+              <img src="assets/images/dashboard/news-2.png" alt="新闻2" />
+              <h4>聚焦碳交易：2025年政府工作报告“双碳”部署</h4>
+              <div class="news-actions">
+                <button class="fav-btn" type="button" aria-label="收藏">♡</button>
+                <a class="read-btn" href="news.html">阅读 <span>→</span></a>
+              </div>
+            </article>
+
+            <article class="news-card" data-search="气候变化 农业影响 农民解决方案">
+              <img src="assets/images/dashboard/news-3.png" alt="新闻3" />
+              <h4>气候变化对农业的影响：农民寻找解决方案</h4>
+              <div class="news-actions">
+                <button class="fav-btn" type="button" aria-label="收藏">♡</button>
+                <a class="read-btn" href="news.html">阅读 <span>→</span></a>
+              </div>
+            </article>
+          </section>
+
+          <p id="searchEmpty" class="search-empty" hidden>没有找到匹配内容，请换个关键词。</p>
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/scripts/dashboard.js"></script>
+  </body>
+</html>
+

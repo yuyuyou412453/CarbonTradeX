@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARBON X - 首页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/site.css" />
+    <link rel="stylesheet" href="assets/styles/home.css" />
+  </head>
+  <body data-page="home" class="home-page">
+    <header class="top-nav home-nav">
+      <div class="container nav-inner home-nav-inner">
+        <a class="brand home-brand" href="index.html" aria-label="Carbon X">
+          <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+        </a>
+        <button class="menu-btn" type="button" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav home-main-nav">
+          <a data-nav="home" href="index.html">首页</a>
+          <a data-nav="news" href="cart.html">购物车</a>
+          <a data-nav="partners" href="partners.html">关于我们</a>
+          <a data-nav="dashboard" href="dashboard.html">足迹追踪</a>
+        </nav>
+        <a class="home-register-btn" href="contact.html">注册</a>
+      </div>
+    </header>
+
+    <main class="layout home-layout">
+      <section class="section home-hero-section">
+        <div class="container home-hero-grid fade-in">
+          <div class="home-hero-accent" aria-hidden="true">
+            <span class="pill pill-a"></span>
+            <span class="pill pill-b"></span>
+            <span class="pill pill-c"></span>
+          </div>
+          <div class="home-hero-copy">
+            <p class="eyebrow home-eyebrow">构建建设未来</p>
+            <h1 class="home-title">
+              <span class="home-title-line">基于区块链动态博弈</span>
+              <span class="home-title-line">的碳电商基础设施服务商</span>
+            </h1>
+            <a class="home-cta-btn" href="platform.html">点击获取</a>
+          </div>
+          <div class="home-hero-visual">
+            <img src="assets/images/home/hero-chip.png" alt="芯片网络示意图" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-map-section">
+        <div class="container">
+          <div class="home-achievement-banner fade-in">
+            <img src="assets/images/home/achievements.png" alt="我们的成就" />
+          </div>
+          <div class="home-map-panel fade-in">
+            <img src="assets/images/home/map-main.png" alt="全球节点分布地图" />
+          </div>
+          <div class="home-partner-strip fade-in">
+            <img src="assets/images/home/partners-strip.png" alt="合作伙伴" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-news-section">
+        <div class="container">
+          <div class="home-news-full fade-in">
+            <img src="assets/images/home/news-focus.png" alt="新闻要点完整版" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-workflow-section">
+        <div class="container">
+          <h2 class="home-workflow-title fade-in">我们如何工作，我们的系统和我们的工作流程</h2>
+          <div class="home-workflow-list">
+            <article class="home-work-item fade-in">
+              <img class="work-num" src="assets/images/home/num-01.png" alt="01" />
+              <div class="work-copy">
+                <h3>数据追踪</h3>
+                <p>
+                  通过可信链路同步企业的原始数据上报和治理结果，形成可审计、可追溯、可复核的碳数据资产，支持跨角色协同管理。
+                </p>
+              </div>
+              <img class="work-icon" src="assets/images/home/icon-network.png" alt="数据追踪图标" />
+            </article>
+
+            <article class="home-work-item reverse fade-in">
+              <img class="work-icon" src="assets/images/home/icon-analytics.png" alt="研究监控图标" />
+              <div class="work-copy">
+                <h3>研究&监控</h3>
+                <p>
+                  对行业重点指标进行趋势分析，实时监测项目进展并提供预警，支持管理方快速生成策略建议和调度方案。
+                </p>
+              </div>
+              <img class="work-num" src="assets/images/home/num-02.png" alt="02" />
+            </article>
+
+            <article class="home-work-item fade-in">
+              <img class="work-num" src="assets/images/home/num-03.png" alt="03" />
+              <div class="work-copy">
+                <h3>技术探讨</h3>
+                <p>
+                  基于模块化架构进行技术能力拓展，结合区块链、多维建模与可视化分析，持续提升系统性能和治理效率。
+                </p>
+              </div>
+              <img class="work-icon" src="assets/images/home/icon-flow.png" alt="技术探讨图标" />
+            </article>
+          </div>
+          <div class="home-center-action fade-in">
+            <a class="home-outline-btn" href="platform.html">查看更多内容</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-testimonial-section">
+        <div class="container">
+          <h2 class="home-workflow-title home-comment-title fade-in">我们的用户评论社区</h2>
+          <div class="home-testimonial-shell fade-in" id="homeTestimonial">
+            <button class="quote-nav home-arrow" id="homeQuotePrev" type="button" aria-label="上一条">←</button>
+            <div class="home-testimonial-card">
+              <img class="home-quote-avatar" src="assets/images/home/avatar-user.png" alt="用户头像" />
+              <div class="home-quote-content">
+                <p class="home-quote-text" id="homeQuoteText"></p>
+              </div>
+            </div>
+            <button class="quote-nav home-arrow" id="homeQuoteNext" type="button" aria-label="下一条">→</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="home-subscribe-section">
+      <div class="container home-subscribe-wrap">
+        <div class="home-subscribe-left">
+          <p>在全球气候变化的背景下，碳排放成为各国面临的重大挑战。</p>
+          <p>为了有效应对这一问题，我们的目标是建立一个创新的碳交易平台，通过结合免费和有偿发放的方式对碳排放权进行管理。</p>
+          <p>我们希望通过参考碳足迹追踪的方式，减少整体碳排放量，并在平台成熟后，通过定期的招标发放，激励企业积极参与减排工作。</p>
+          <p>
+            采用区块链和智能合约技术，我们将确保排放权交易的安全性与透明性，实时记录每一笔交易，为企业提供可信的交易环境。我们还将通过设立经济激励和竞争机制，评估季度交易量，对表现优秀的企业进行奖励，同时对低于预期的企业实施激励与惩罚，以推动行业整体的碳减排效果。
+          </p>
+          <p>通过这些举措，我们旨在为实现可持续发展目标贡献力量，推动社会各界共同参与碳减排的努力。。</p>
+          <p class="home-source-line home-source-start">网站来源</p>
+          <p class="home-source-line">兰州大学币不可少团队出品</p>
+          <p class="home-source-line">地址</p>
+          <p class="home-source-line">甘肃省兰州市城关区天水南路222号</p>
+          <p class="home-source-line">-CarbonTradeX.com</p>
+        </div>
+
+        <div class="home-subscribe-right">
+          <h3>邮件订阅</h3>
+          <form class="home-subscribe-form" id="homeSubscribeForm" action="javascript:void(0)">
+            <input id="homeSubscribeEmail" type="email" placeholder="电子邮件地址" />
+            <button type="submit">立即订阅</button>
+          </form>
+          <div class="home-subscribe-inline">
+            <span>邮件地址 1720249798@qq.com</span>
+            <span>电话 0931-8912116</span>
+          </div>
+          <p class="home-subscribe-status" id="homeSubscribeStatus" aria-live="polite"></p>
+
+          <div class="home-footer-links">
+            <div>
+              <h4>关于我们</h4>
+              <a href="partners.html">关于我们</a>
+              <a href="platform.html">交易市场</a>
+              <a href="news.html">新闻页面</a>
+            </div>
+            <div>
+              <h4>在线支持</h4>
+              <a href="dashboard.html">足迹追踪</a>
+              <a href="cases.html">排行榜</a>
+              <a href="cart.html">购物车</a>
+              <a href="contact.html">注册界面</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/scripts/site.js"></script>
+    <script src="assets/scripts/home.js"></script>
+  </body>
+</html>

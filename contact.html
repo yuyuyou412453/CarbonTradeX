@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon X - 注册</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/contact.css" />
+  </head>
+  <body class="auth-page">
+    <header class="auth-header">
+      <div class="auth-header-inner">
+        <a class="auth-logo" href="index.html" aria-label="Carbon X 首页">
+          <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+        </a>
+
+        <button class="auth-grid-btn" type="button" aria-label="快捷菜单">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="auth-top-nav">
+          <a href="index.html">首页</a>
+          <a class="active" href="contact.html">注册</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-main">
+      <section class="auth-shell">
+        <div class="auth-left">
+          <article class="auth-step" data-step="auth">
+            <h1 id="authTitle">建立你的账户</h1>
+            <p id="authSubtitle">设置账户只需不到 1 分钟。</p>
+
+            <div class="auth-toggle">
+              <button id="tabLogin" type="button">登录</button>
+              <button id="tabSignup" type="button" class="active">注册</button>
+            </div>
+
+            <form id="authForm" class="auth-form" novalidate>
+              <label class="auth-input">
+                <span class="icon-left">@</span>
+                <input id="authEmail" name="email" type="email" placeholder="邮件地址" autocomplete="email" />
+                <span class="icon-right">◌</span>
+              </label>
+
+              <label class="auth-input">
+                <span class="icon-left">◍</span>
+                <input id="authPassword" name="password" type="password" placeholder="密码" autocomplete="current-password" />
+              </label>
+
+              <label class="auth-input">
+                <span class="icon-left">⌂</span>
+                <input id="authInvite" name="invite" type="text" placeholder="推荐代码 (可选)" />
+              </label>
+
+              <button id="forgotBtn" class="auth-link-btn forgot-entry" type="button">忘记密码？</button>
+
+              <button class="auth-submit" type="submit">
+                <span>继续</span>
+                <em>➜</em>
+              </button>
+            </form>
+          </article>
+
+          <article class="auth-step hidden" data-step="forgot">
+            <h1>忘记密码？</h1>
+            <p>在下面输入您的电子邮件，您将收到一封包含密码重置链接的电子邮件。</p>
+
+            <div class="auth-watch">
+              <img src="assets/images/auth/watch-it.png" alt="找回密码插图" />
+            </div>
+
+            <form id="forgotForm" class="auth-form" novalidate>
+              <label class="auth-input">
+                <span class="icon-left">@</span>
+                <input id="forgotEmail" type="email" placeholder="电子邮件地址" autocomplete="email" />
+                <span class="icon-right">◌</span>
+              </label>
+
+              <button class="auth-submit" type="submit">
+                <span>继续</span>
+                <em>➜</em>
+              </button>
+            </form>
+
+            <button id="backToAuthBtn" class="auth-link-btn back-btn" type="button">返回登录 / 注册</button>
+          </article>
+
+          <article class="auth-step hidden" data-step="method">
+            <h1>让我们确认是你！</h1>
+            <p>完成验证过程</p>
+
+            <p class="auth-section-label">选择确认方式:</p>
+
+            <div class="auth-toggle small">
+              <button id="methodSystemBtn" type="button" class="active">系统</button>
+              <button id="methodEmailBtn" type="button">邮箱</button>
+            </div>
+
+            <div class="auth-methods">
+              <button class="method-card" type="button" data-channel="sms">
+                <span class="radio-dot"></span>
+                <span>
+                  <strong>Get The code by (SMS) at :</strong>
+                  <small>+1 202 ****015I</small>
+                </span>
+              </button>
+
+              <button class="method-card active" type="button" data-channel="email">
+                <span class="radio-dot"></span>
+                <span>
+                  <strong>Get the code by email at :</strong>
+                  <small>Er****de@qq.com</small>
+                </span>
+              </button>
+            </div>
+
+            <button id="methodContinueBtn" class="auth-submit" type="button">
+              <span>继续</span>
+              <em>➜</em>
+            </button>
+          </article>
+
+          <article class="auth-step hidden" data-step="code">
+            <h1>电子邮件验证</h1>
+            <p>请输入发送到您的电子邮件中的 4 位数验证码</p>
+
+            <div class="code-meta">
+              <strong>发送验证码：</strong>
+              <span>example@mail.com</span>
+            </div>
+
+            <form id="codeForm" class="code-form" novalidate>
+              <input class="code-input" type="text" inputmode="numeric" maxlength="1" />
+              <input class="code-input" type="text" inputmode="numeric" maxlength="1" />
+              <input class="code-input" type="text" inputmode="numeric" maxlength="1" />
+              <input class="code-input" type="text" inputmode="numeric" maxlength="1" />
+
+              <button class="auth-submit" type="submit">
+                <span>继续</span>
+                <em>➜</em>
+              </button>
+            </form>
+          </article>
+
+          <p id="authStatus" class="auth-status" aria-live="polite"></p>
+        </div>
+
+        <div class="auth-right">
+          <img src="assets/images/auth/world-map.png" alt="全球网络地图" />
+          <p id="authSceneText" class="auth-scene-text">
+            <span class="scene-keyword">Trade</span><br />
+            anything anywhere with Whale.io!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/scripts/contact.js"></script>
+  </body>
+</html>

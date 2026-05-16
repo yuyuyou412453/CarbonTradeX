@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon X - 购物车</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/site.css" />
+    <link rel="stylesheet" href="assets/styles/cart.css" />
+  </head>
+  <body class="cart-page" data-page="cart">
+    <div class="cart-layout">
+      <aside class="cart-sidebar">
+        <div class="cart-logo-wrap">
+          <a href="index.html" class="cart-logo-link">
+            <img src="assets/images/home/logo-carbonx.png" alt="Carbon X" />
+          </a>
+        </div>
+
+        <div class="cart-profile">
+          <img src="assets/images/cart/avatar.png" alt="头像" />
+          <h2>碳小链</h2>
+          <p>已认证 <span>✔</span></p>
+        </div>
+
+        <nav class="cart-menu">
+          <a href="index.html"><img class="menu-icon-img" src="assets/images/rank/icon-home.png" alt="" />首页</a>
+          <a href="platform.html"><img class="menu-icon-img" src="assets/images/rank/icon-market.png" alt="" />交易市场</a>
+          <a href="cases.html"><img class="menu-icon-img" src="assets/images/rank/icon-rank.png" alt="" />排行榜</a>
+          <a href="dashboard.html"><img class="menu-icon-img" src="assets/images/rank/icon-track.png" alt="" />足迹追踪</a>
+          <a class="active" href="cart.html"><img class="menu-icon-img" src="assets/images/rank/icon-cart.png" alt="" />购物车</a>
+          <a href="contact.html"><img class="menu-icon-img" src="assets/images/rank/icon-setting.png" alt="" />注册界面</a>
+          <a href="partners.html"><img class="menu-icon-img" src="assets/images/rank/icon-market.png" alt="" />关于我们</a>
+          <a href="news.html"><img class="menu-icon-img" src="assets/images/rank/icon-news.png" alt="" />新闻页面</a>
+        </nav>
+      </aside>
+
+      <main class="cart-main">
+        <header class="cart-toolbar">
+          <button class="square-btn menu-grid-btn" type="button" aria-label="快捷菜单">
+            <span class="dot-grid" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </span>
+          </button>
+
+          <label class="toolbar-search">
+            <span class="search-lens"></span>
+            <input id="toolbarSearchInput" type="search" placeholder="搜索" />
+          </label>
+
+          <div class="toolbar-actions">
+            <button class="square-btn" type="button" aria-label="购物袋"><span class="bag-icon"></span></button>
+            <button class="square-btn" type="button" aria-label="设置"><span class="gear-icon"></span></button>
+            <button class="square-btn" type="button" aria-label="通知">
+              <span class="bell-icon"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="cart-card">
+          <div class="card-top">
+            <p>显示：<strong id="catalogTitle">所有产品</strong></p>
+            <button id="addProductBtn" class="add-btn" type="button">+ 添加商品</button>
+          </div>
+
+          <label class="card-search">
+            <span class="search-lens"></span>
+            <input id="cardSearchInput" type="search" placeholder="请输入名称或ID关键字搜索..." />
+          </label>
+
+          <div class="table-head">
+            <span class="check-col"></span>
+            <span>产品名称 ▾</span>
+            <span>价格 ▾</span>
+            <span>库存 ▾</span>
+          </div>
+
+          <div id="productRows" class="table-body"></div>
+
+          <div class="card-bottom">
+            <button id="resultsSummary" class="results-btn" type="button">显示结果：0 条</button>
+            <div class="pager" aria-label="分页">
+              <button id="pagerPrev" type="button" aria-label="上一页">‹</button>
+              <div id="pagerPages" class="pager-pages"></div>
+              <button id="pagerNext" type="button" aria-label="下一页">›</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="addModal" class="cart-modal" hidden>
+      <div class="cart-modal-backdrop" data-close-modal></div>
+      <section class="cart-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
+        <header class="cart-modal-head">
+          <h3 id="addModalTitle">添加商品</h3>
+          <button id="closeModalBtn" type="button" class="modal-close" aria-label="关闭">×</button>
+        </header>
+        <form id="addProductForm" class="cart-modal-form">
+          <label>
+            产品名称
+            <input name="name" type="text" maxlength="24" required />
+          </label>
+          <label>
+            产品编号
+            <input name="id" type="text" maxlength="24" required />
+          </label>
+          <label>
+            价格
+            <input name="price" type="number" min="0" step="0.01" required />
+          </label>
+          <label>
+            库存
+            <input name="stock" type="number" min="0" step="1" required />
+          </label>
+          <label>
+            图片
+            <input name="image" type="text" list="productImageList" placeholder="assets/images/cart/coal-a.png" />
+          </label>
+          <datalist id="productImageList">
+            <option value="assets/images/cart/coal-a.png"></option>
+            <option value="assets/images/cart/coal-b.png"></option>
+            <option value="assets/images/cart/carbon-rights.png"></option>
+            <option value="assets/images/cart/consult-rights.png"></option>
+            <option value="assets/images/cart/timber.png"></option>
+          </datalist>
+          <div class="cart-modal-actions">
+            <button type="button" id="cancelModalBtn" class="modal-cancel">取消</button>
+            <button type="submit" class="modal-submit">确认添加</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="assets/scripts/cart.js"></script>
+  </body>
+</html>
